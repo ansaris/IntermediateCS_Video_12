@@ -15,17 +15,12 @@ class Player
     }
 
 
+    // Fifth, let's create a paramterless constructor that calls our other
+    // constructor.
 
-
-
-
-    // This is a read-write property of type string
-    // called Name.
-
-    // We'll look at properties in more detail in a 
-    // later video.
-
-    // Why public? We'll look at that later as well.
+    public Player() 
+        : this("Anonymous")
+    { }
 
     public string Name { get; set; }
 }

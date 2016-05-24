@@ -4,13 +4,22 @@ using System.Collections.Generic;
 
 class Hangman
 {
-    // We have a property of type Player called Player.
-    // This is called the "Color Color" scenario.
-    public Player Player { get; set; }
+    // Third, we can do the same thing to our game class...
 
-    // The following is a poor design choice; we'll see why in a 
-    // later video. But right now we're just trying to
-    // sketch out what all the parts are, and their relationships.
+    public Hangman(Player player)
+    {
+        if (player == null)
+            throw new ArgumentNullException(nameof(player));
+        Player = player;
+    }
+
+    public Hangman() 
+        : this(new Player())
+    {
+
+    }
+
+    public Player Player { get; set; }
 
     public List<string> WordList { get; set; }
 
